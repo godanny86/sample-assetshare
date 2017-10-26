@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <asset-share-commons jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <structure jcr:primaryType="nt:unstructured">
+                <search-page jcr:primaryType="nt:unstructured">
+                    <policy_1509032373896
+                        jcr:lastModified="{Date}2017-10-26T11:50:55.819-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Theme"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="asset-share-commons.semantic-ui-sample">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1509032373896>
+                </search-page>
+                <user-menu jcr:primaryType="nt:unstructured">
+                    <policy_1509032504606
+                        jcr:lastModified="{Date}2017-10-26T11:54:04.096-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - User Menu"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        greeting="Hello"
+                        logInLabel="Log In"
+                        logInLink="#"
+                        logOutLabel="Log Out"
+                        logOutLink="#">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1509032504606>
+                </user-menu>
+                <footer jcr:primaryType="nt:unstructured">
+                    <policy_1509032581745
+                        jcr:lastModified="{Date}2017-10-26T11:54:58.875-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Footer"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        text="Sample Asset Share - 2017">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1509032581745>
+                </footer>
+                <details-page jcr:primaryType="nt:unstructured">
+                    <policy_1509032820268
+                        jcr:lastModified="{Date}2017-10-26T11:47:20.467-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Theme"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="asset-share-commons.semantic-ui-sample">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1509032820268>
+                </details-page>
+                <page jcr:primaryType="nt:unstructured">
+                    <policy_1509033008979
+                        jcr:lastModified="{Date}2017-10-26T11:56:04.790-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Theme"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="asset-share-commons.semantic-ui-sample">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1509033008979>
+                </page>
+            </structure>
+        </components>
+    </asset-share-commons>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <policy_40645570873478
+                        jcr:lastModified="{Date}2017-10-26T11:56:17.567-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Structure"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:Asset Share Commons - Structure]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_40645570873478>
+                    <policy_40709013594948
+                        jcr:lastModified="{Date}2017-10-26T11:42:51.031-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Search"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:Asset Share Commons - Content,group:Asset Share Commons - Search]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_40709013594948>
+                    <policy_41178466135620
+                        jcr:lastModified="{Date}2017-10-26T11:49:13.013-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Details"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:Asset Share Commons - Content,group:Asset Share Commons - Details]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_41178466135620>
+                    <policy_41379088198385
+                        jcr:lastModified="{Date}2017-10-26T11:52:22.977-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Modals"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="group:Asset Share Commons - Modals">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_41379088198385>
+                    <policy_41510889258743
+                        jcr:lastModified="{Date}2017-10-26T11:56:30.859-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sample Asset Share - Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="group:Asset Share Commons - Content">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_41510889258743>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+</jcr:root>

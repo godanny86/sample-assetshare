@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2017-10-26T11:49:13.016-04:00"
+        cq:lastModifiedBy="admin"
+        cq:policy="asset-share-commons/components/structure/details-page/policy_1509032820268"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root jcr:primaryType="nt:unstructured">
+            <rail
+                cq:policy="wcm/foundation/components/responsivegrid/policy_40645570873478"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <user_menu
+                    cq:policy="asset-share-commons/components/structure/user-menu/policy_1509032504606"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                <responsivegrid
+                    cq:policy="wcm/foundation/components/responsivegrid/policy_41178466135620"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping"/>
+            </rail>
+            <main
+                cq:policy="wcm/foundation/components/responsivegrid/policy_40645570873478"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <footer
+                    cq:policy="asset-share-commons/components/structure/footer/policy_1509032581745"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                <responsivegrid
+                    cq:policy="wcm/foundation/components/responsivegrid/policy_41178466135620"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping"/>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>
