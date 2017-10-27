@@ -37,3 +37,27 @@ a.ui.basic.primary.label:hover {
   color: @labelPrimaryColorHover !important;
   border-color: @labelPrimaryColorHover !important;
 }
+
+/* Status Labels */
+
+/* Uppercase Status */
+.ui.status.labels .label,
+.ui.status.label {
+	text-transform: uppercase;
+}
+
+/* New Status */
+.ui.status.newstatus.labels .label,
+.ui.status.newstatus.label {
+  background-color: @newStatusColor !important;
+  border-color: @newStatusColor !important;
+  color: @white !important;
+}
+
+/* Updated Status */
+.ui.status.updatedstatus.labels .label,
+.ui.status.updatedstatus.label {
+  background-color: @updatedStatusColor !important;
+  border-color: @updatedStatusColor !important;
+  color: @textColor !important;
+}

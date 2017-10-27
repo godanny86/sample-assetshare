@@ -1,4 +1,4 @@
-package com.sample.assetshare.components.impl;
+package com.sample.assetshare.content.properties.impl;
 
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -17,13 +17,16 @@ import com.day.cq.dam.api.Asset;
 @Designate(ocd = AssetStatusImpl.Cfg.class)
 public class AssetStatusImpl extends AbstractComputedProperty<String> {
     
+    //Human readable label
     public static final String LABEL = "Asset Status";
+    
+    //Name to identify the property in the ValueMap i.e asset.properties['assetStatus']
     public static final String NAME = "assetStatus";
     private Cfg cfg;
     
-    private static final int DAYS_OLD = -7;
-    private static final String NEW_STATUS = "New";
-    private static final String UPDATED_STATUS = "Updated";
+    private static final int DEFAULT_DAYS = -7;
+    private static final String DEFAULT_NEW_LABEL = "new";
+    private static final String DEFAULT_UPDATED_LABEL = "updated";
 
     @Override
     public String getName() {
@@ -48,15 +51,15 @@ public class AssetStatusImpl extends AbstractComputedProperty<String> {
         Calendar assetModified = assetProperties.get(JcrConstants.JCR_CONTENT + "/" + JcrConstants.JCR_LASTMODIFIED, Calendar.class);
         
         //Get a calendar to compare to
-        Calendar weekOld = getCompareCalendar();
-        
-        //if asset created < one week ago
+        Calendar weekOld = getCompareCalendar(cfg.days());
+       
         if(assetCreated.after(weekOld)) {
-            return NEW_STATUS;
+            //if asset created < one week ago
+            return cfg.newLabel();
         } else if (assetModified.after(weekOld)) {
-            return UPDATED_STATUS;
+            //if asset modified < one week ago
+            return cfg.updatedLabel();
         }
-        
         return null;
     }
 
@@ -78,20 +81,38 @@ public class AssetStatusImpl extends AbstractComputedProperty<String> {
                 description = "Defines the type of data this exposes. This classification allows for intelligent exposure of Computed Properties in DataSources, etc."
         )
         String[] types() default {Types.METADATA};
+        
+        @AttributeDefinition(
+                name = "Days",
+                description = "Defines the number of days in which an asset is considered 'New' or 'Updated'. Expected to be a negative number."
+        )
+        int days() default DEFAULT_DAYS;
+        
+        @AttributeDefinition(
+                name = "New Label",
+                description = "Text to display as 'New' status."
+        )
+        String newLabel() default DEFAULT_NEW_LABEL;
+        
+        @AttributeDefinition(
+                name = "Updated Label",
+                description = "Text to display as 'Updated' status."
+        )
+        String updatedLabel() default DEFAULT_UPDATED_LABEL;
     }
     
     /***
      * 
      * @return a Calendar object to compare asset dates to
      */
-    private Calendar getCompareCalendar() {
+    private Calendar getCompareCalendar(int daysOld) {
         Calendar compareCal = Calendar.getInstance();
         // reset hour, minutes, seconds and millis
         compareCal.set(Calendar.HOUR_OF_DAY, 0);
         compareCal.set(Calendar.MINUTE, 0);
         compareCal.set(Calendar.SECOND, 0);
         compareCal.set(Calendar.MILLISECOND, 0);
-        compareCal.add(Calendar.DAY_OF_MONTH, DAYS_OLD);
+        compareCal.add(Calendar.DAY_OF_MONTH, daysOld);
         
         return compareCal;
     }

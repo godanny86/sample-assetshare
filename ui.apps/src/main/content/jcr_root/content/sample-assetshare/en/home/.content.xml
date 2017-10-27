@@ -4,7 +4,7 @@
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/asset-share-commons/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2017-10-26T17:25:23.695-04:00"
+        cq:lastModified="{Date}2017-10-27T16:30:32.120-04:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/sample-assetshare/settings/wcm/templates/search-template"
         jcr:primaryType="cq:PageContent"
@@ -306,21 +306,21 @@
                     <results
                         jcr:created="{Date}2017-10-26T13:46:43.168-04:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2017-10-26T17:25:23.688-04:00"
+                        jcr:lastModified="{Date}2017-10-27T16:30:32.115-04:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="asset-share-commons/components/search/results"
-                        cardResultResourceType="/apps/sample-assetshare/components/content/card"
+                        cardResultResourceType="/apps/sample-assetshare/components/search/card"
                         guessTotal="{Long}100"
                         layout="card"
                         limit="{Long}24"
-                        listResultResourceType="/apps/sample-assetshare/components/content/list"
+                        listResultResourceType="/apps/sample-assetshare/components/search/list"
                         loadMoreLabel="Load more"
                         missingImage="/content/dam/asset-share-commons/en/site/missing-thumbnail--dark.jpg"
                         noResultsText="Your search did not match any assets."
                         orderBy="@jcr:content/jcr:lastModified"
                         orderBySort="desc"
-                        paths="/content/dam"/>
+                        paths="[/content/dam,]"/>
                 </responsivegrid>
                 <header
                     jcr:created="{Date}2017-10-26T11:40:44.749-04:00"

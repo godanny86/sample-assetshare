@@ -42,7 +42,11 @@
 		<td class="image">
 			<a href="${assetDetails.url @ suffix = asset.path}"><img src="${asset.properties['thumbnail'] || properties['missingImage'] @ context = 'attribute'}" alt="${asset.properties['title']}"/></a>
 		</td>
-        <td>${asset.properties['assetStatus']}</td>
+        <td><div data-sly-test.status="${asset.properties['assetStatus']}"
+        		class="ui status ${status}status label">
+        		${status @ i18n}
+        	</div>
+        </td>
 		<td class="header">
 			<a href="${assetDetails.url @ suffix = asset.path}">${asset.properties['title']}</a>
 		</td>

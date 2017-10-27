@@ -62,4 +62,8 @@
 @msgInfoBackgroundColor: @midBlack;
 @msgWarningBackgroundColor: @yellow;
 
+/* Status Labels */
+@newStatusColor : #2185D0;
+@updatedStatusColor : @primaryColor;
+
 
