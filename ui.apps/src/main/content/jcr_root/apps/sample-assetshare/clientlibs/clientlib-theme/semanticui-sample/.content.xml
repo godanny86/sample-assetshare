@@ -3,5 +3,6 @@
     jcr:primaryType="cq:ClientLibraryFolder"
     allowProxy="{Boolean}true"
     categories="[asset-share-commons.semantic-ui-sample]"
-    embed="[             asset-share-commons.semantic-ui-sample.globals,             asset-share-commons.semantic-ui-sample.elements,             asset-share-commons.semantic-ui-sample.collections,             asset-share-commons.semantic-ui-sample.views,             asset-share-commons.semantic-ui-sample.modules,asset-share-commons.site.semantic-ui,             asset-share-commons.site.semantic-ui.components             ]"
+    dependencies="[asset-share-commons.base]"      
+    embed="[asset-share-commons.semantic-ui-sample.globals,asset-share-commons.semantic-ui-sample.elements,asset-share-commons.semantic-ui-sample.collections,             asset-share-commons.semantic-ui-sample.views,asset-share-commons.semantic-ui-sample.modules,asset-share-commons.site.semantic-ui,asset-share-commons.site.semantic-ui.components]"
     jsProcessor="[min:gcc,default:none]"/>
