@@ -160,13 +160,13 @@
             <dependency>
             	<groupId>com.adobe.aem.commons</groupId>
   				<artifactId>assetshare.core</artifactId>
-  				<version>1.0.0</version>
+  				<version>1.6.10</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.adobe.aem.commons</groupId>
   				<artifactId>assetshare.ui.apps</artifactId>
-  				<version>1.0.0</version>
+  				<version>1.6.10</version>
                 <scope>provided</scope>
                 <type>content-package</type>
             </dependency>
